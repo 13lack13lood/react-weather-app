@@ -1,0 +1,8 @@
+body {
+  background-image: url('./assets/sunset.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: helvetica;
+}
