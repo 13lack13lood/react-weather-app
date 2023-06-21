@@ -27,8 +27,6 @@ function App() {
         fetchWeather();
     }, [query, units, setQuery, setUnits]);
 
-    console.log(weather);
-
     const formatBackground = () => {
         const threshold = units == "metric" ? 25 : 75;
 

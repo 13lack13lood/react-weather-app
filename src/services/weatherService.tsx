@@ -56,8 +56,6 @@ const formatWeatherData = (data: any) => {
 };
 
 const formatForecastData = (data: any, timezone: number) => {
-    // console.log(data);
-
     let { list }: { list: any[] } = data;
     let hourly = list.slice(0, 5).map((forecastData: any) => {
         return {
@@ -94,8 +92,6 @@ const formatForecastData = (data: any, timezone: number) => {
     }
 
     let daily = [];
-
-    console.log(forecast);
 
     for (let i = 0; i < forecast.length; i += 8) {
         let max = 0,
@@ -161,12 +157,6 @@ const getFormattedWeatherData = async (searchParams: { [key: string]: string }) 
 
     const formattedForecast = await getWeatherData("forecast", searchParams).then((data) => {
         return formatForecastData(data, formattedWeather.timezone);
-    });
-
-    console.log({
-        weather: formattedWeather,
-        forecast: formattedForecast,
-        time: formatToLocalTime(formattedWeather.dt, formattedWeather.timezone),
     });
 
     return {
