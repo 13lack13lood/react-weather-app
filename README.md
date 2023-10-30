@@ -1,6 +1,6 @@
 # React Weather App
 
-A simple clearn weather app website that shows current weather as well as forecast and also supports city search
+A simple clean weather app website that shows current weather as well as forecast and also supports city search
 
 Made using React, Tailwind CSS, and OpenWeather API
 
